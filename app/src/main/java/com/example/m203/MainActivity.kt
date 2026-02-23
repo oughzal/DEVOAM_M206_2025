@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
                 // gréer l'adapter et le recycler view
                 withContext(Dispatchers.Main){
-                    val adapter = CountryAdapter(this@MainActivity,countries)
-                    binding.lvCountry.adapter = adapter
+
+
                 }
 
 
