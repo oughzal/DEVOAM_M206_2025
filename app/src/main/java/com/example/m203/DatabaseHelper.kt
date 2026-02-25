@@ -39,7 +39,11 @@ class DatabaseHelper(context: Context) :
         val cv = ContentValues().apply {
             put(COL_NOM,    person.nom)
             put(COL_PRENOM, person.prenom)
+
+            put("nom", person.nom)
+            put("prenom", person.prenom)
         }
+
         return writableDatabase.insert(TABLE, null, cv)
     }
 
