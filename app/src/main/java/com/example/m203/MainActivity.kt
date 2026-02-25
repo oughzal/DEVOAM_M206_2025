@@ -3,6 +3,7 @@ package com.example.m203
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
 import com.example.m203.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
@@ -39,5 +40,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+
+
+        lifecycleScope.launch {
+             val userDAO = UserDB.getInstance(this@MainActivity)!!.userDao()
+                userDAO.insertUser(User(0, "John", "Doe"))
+        }
+
     }
 }

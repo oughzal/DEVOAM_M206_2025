@@ -16,6 +16,7 @@ import androidx.room.Query
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.Update
+import androidx.room.Upsert
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -25,7 +26,7 @@ data class User (
     val id : Int,
     @ColumnInfo(name = "prenom")
     val firstName : String,
-    @ColumnInfo(name = "nom")
+
     val lastName : String
 )
 
@@ -45,6 +46,12 @@ interface UserDAO {
 
     @Delete
     suspend fun deleteUser(user: User)
+
+    @Query("DELETE FROM User where id=:id")
+    suspend fun deleteUserById(id: Int)
+
+    @Upsert
+    suspend fun upsertUser(user: User)
 }
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
