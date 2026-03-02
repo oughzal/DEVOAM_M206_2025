@@ -10,7 +10,34 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/etText"
+        android:hint="Entrer un texte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/btnSaveFile"
+        android:text="Sauvegarder fichier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/btnReadFile"
+        android:text="Lire fichier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSavePrefs"
+        android:text="Sauvegarder Pref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnReadPrefs"
+        android:text="Lire Pref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
