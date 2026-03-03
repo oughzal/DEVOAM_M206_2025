@@ -1,5 +1,6 @@
 package com.example.m203
 
+import com.example.m203.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.m203.databinding.ActivityMainBinding
@@ -36,6 +37,16 @@ class MainActivity : AppCompatActivity() {
         val file = File(cacheDir,"file1.txt")
         file.writeText("Hello")
         val text = file.readText()
+
+
+        val test = assets.open("file1.text")
+            .bufferedReader()
+            .use {
+            it.readText()
+        }
+        val raw = resources.openRawResource(R.raw.data)
+            .bufferedReader()
+            .use { it.readText() }
 
 
 

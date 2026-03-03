@@ -18,7 +18,8 @@ class FileUtil(val context : Context) {
         }
     }
 
-    fun readFromAssets(fileName: String) : String {
+    fun readFromAssets(fileName: String): String {
+
         return context.assets.open(fileName)
             .bufferedReader()
             .use { it.readText() }
@@ -33,7 +34,7 @@ class FileUtil(val context : Context) {
 
     fun readJsonFromAssets(fileName: String) : List<User> {
         val json = readFromAssets(fileName)
-        return Json.decodeFromString(json)
+        return Json.decodeFromString<List<User>>(json)
     }
 
     fun writeUsersToJsonFile(fileName: String, users: List<User>) {
