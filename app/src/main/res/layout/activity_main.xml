@@ -10,6 +10,36 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open website"
+        android:id="@+id/btnOpenWeb" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open dialer"
+        android:id="@+id/btnOpenDialer" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open map"
+        android:id="@+id/btnOpenMap" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open SMS"
+        android:id="@+id/btnSendSMS" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open email"
+        android:id="@+id/btnSendEmail" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open Gallery"
+        android:id="@+id/btnOpenGallery" />
 
 
 
